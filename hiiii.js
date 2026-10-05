@@ -1046,26 +1046,71 @@ console.log(square(4));*/
 // // Arrays & Objects with Destructuring and JSON Handling
 
 // Array destructuring
-let numbers = [10, 20, 30];
-let [a, b, c] = numbers;
+// let numbers = [10, 20, 30];
+// let [a, b, c] = numbers;
 
-console.log("Array Destructuring:", a, b, c);
+// console.log("Array Destructuring:", a, b, c);
 
-// Object destructuring
-let student = {
-    name: "Ishita",
-    age: 19,
-    course: "BCA"
-};
+// // Object destructuring
+// let student = {
+//     name: "Ishita",
+//     age: 19,
+//     course: "BCA"
+// };
 
-let { name, age, course } = student;
+// let { name, age, course } = student;
 
-console.log("Object Destructuring:", name, age, course);
+// console.log("Object Destructuring:", name, age, course);
 
-// JSON handling (stringify)
-let jsonString = JSON.stringify(student);
-console.log("JSON String:", jsonString);
+// // JSON handling (stringify)
+// let jsonString = JSON.stringify(student);
+// console.log("JSON String:", jsonString);
 
-// JSON parsing
-let parsedObject = JSON.parse(jsonString);
-console.log("Parsed Object:", parsedObject);
+// // JSON parsing
+// let parsedObject = JSON.parse(jsonString);
+// console.log("Parsed Object:", parsedObject);
+
+
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &a, &b);
+
+    printf("\n1. Addition");
+    printf("\n2. Subtraction");
+    printf("\n3. Multiplication");
+    printf("\n4. Division");
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1:
+            printf("Addition = %.2f", a + b);
+            break;
+
+        case 2:
+            printf("Subtraction = %.2f", a - b);
+            break;
+
+        case 3:
+            printf("Multiplication = %.2f", a * b);
+            break;
+
+        case 4:
+            if(b != 0)
+                printf("Division = %.2f", a / b);
+            else
+                printf("Division not possible");
+            break;
+
+        default:
+            printf("Invalid choice");
+    }
+
+    return 0;
+}
